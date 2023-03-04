@@ -1,6 +1,5 @@
 import { Instructor } from "./types";
 
-
 type InstructorProps = {
   instructor: Instructor,
 }

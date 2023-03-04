@@ -1,5 +1,4 @@
-import React from 'react'
-import { Developer, fetchedDeveloper } from './types';
+import { fetchedDeveloper } from './types';
 
 type DeveloperCardProps = {
     developers: fetchedDeveloper[],
