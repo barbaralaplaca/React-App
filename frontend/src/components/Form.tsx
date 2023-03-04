@@ -1,7 +1,11 @@
 import { FormEvent, useRef, useState } from 'react'
+import { Developer } from './types';
 
-export const Form = () => {
-    const [card, setCard] = useState('new developer')
+type PropsForm = {
+    addToState: (p: Developer) => void,
+}
+
+export const Form = (props: PropsForm) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [bootcamp, setBootcamp] = useState('5df90503-6e35-4a93-91a4-f2a1fe457331');
@@ -13,7 +17,7 @@ export const Form = () => {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
-        const name = firstName + lastName;
+        const name = firstName + " " + lastName;
         const developer = {name: name, bootcampId: bootcamp}
 
         fetch('http://localhost:3001/developers', {
@@ -22,9 +26,12 @@ export const Form = () => {
             body: JSON.stringify(developer)
         }).then((response) => {
             if (response.status === 200) {
-
-            }});
-    }
+                response.json().then((data) => {
+                props.addToState(data.developer);
+                })
+            }})
+        };
+    
 
   return (
     <div className='Form'>
@@ -70,10 +77,6 @@ export const Form = () => {
             </div>
             <button className='addDeveloperBtn form-input'>Add Developer</button>
         </form>
-        <p>{firstName}</p>
-        <p>{lastName}</p>
-        <p>{bootcamp}</p>
-
     </div>
   )
 }

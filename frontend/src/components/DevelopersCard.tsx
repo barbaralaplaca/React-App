@@ -1,7 +1,8 @@
-import { fetchedDeveloper } from './types';
+import { Developer } from "./types";
+
 
 type DeveloperCardProps = {
-    developers: fetchedDeveloper[],
+    developers: Developer[],
   }
 
 export const DevelopersCard = (props: DeveloperCardProps) => {
@@ -9,7 +10,7 @@ export const DevelopersCard = (props: DeveloperCardProps) => {
   
     return (
       <div className='Card'>
-          {developers.map((developer: fetchedDeveloper) => (
+          {developers.map((developer: Developer) => (
             <div>
               <p key={developer.id}>{developer.name}</p>
               </div>
