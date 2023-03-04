@@ -1,9 +1,17 @@
-import React from 'react'
+import Person from './Person'
 
-export default function Card() {
+type CardProps = {
+    gallery: () => void,
+    title: string,
+}
+
+export const Card = (props: CardProps) => {
   return (
-    <>
+    <div className='Card'>
         <div>Card</div>
-        </>
+        <Person />
+        <Person />
+        <Person />
+    </div>
   )
 }

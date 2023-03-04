@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.App {
+  color: green;
+}
+
+.Form {
+  color: red;
+}
+
+.Gallery {
+  color: blue;
+}
+
+.Card {
+  color: yellow;
+}
+
+.Person {
+  color: blueviolet;
+}
