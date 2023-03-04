@@ -1,20 +1,8 @@
 import './index.css';
 import { Form } from './components/Form';
 import { Gallery } from './components/Gallery';
-
-export type Developer = {
-  id: string,
-  firstName: string | undefined,
-  lastName: string | undefined,
-  bootcamp: string | undefined,
-}
-
-export type Instructor = {
-  id: string,
-  bootcampId: string,
-  name: string | undefined,
-  favouriteColour?: string,
-}
+import { Developer } from './components/types';
+import { GalleryDevelopers } from './components/GalleryDevelopers';
 
 function App() {
    const onNewFormSubmit = (developer: Developer) => {
