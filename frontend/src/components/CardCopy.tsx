@@ -1,8 +1,7 @@
-import { DeleteButtonToggle } from "./DeleteButtonToggle";
 import { Bootcamp, CardProps, Developer, Instructor } from "./types";
 
 export default function Card(props: CardProps) {
-    const { instructors, developers, bootcamps, handleDelete } = props;
+    const { instructors, developers, bootcamps } = props;
 
   return (
     <div>
@@ -21,10 +20,10 @@ export default function Card(props: CardProps) {
         <h3>Developers</h3>
            <ul>
         {developers.map((developer: Developer) => (
-                <DeleteButtonToggle 
-                  student={developer} 
-                  handleDelete={handleDelete}
-                  />
+                <li className="card-list" key={developer.id}>
+                <p>{developer.name}</p>
+                <button onClick={() => props.handleDelete(developer.id)}>Delete</button>
+                </li>
                 ))}
           </ul>
         </div>

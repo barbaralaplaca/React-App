@@ -32,6 +32,10 @@ function App() {
   const handleDelete = (id: string) => {
     const developerDelete = developersGallery.filter(developer => developer.id !== id);
     setDevelopersGallery(developerDelete);
+    
+    fetch(`http://localhost:3001/developers/${id}`, {
+      method: 'DELETE'
+    })
   }
 
   return (

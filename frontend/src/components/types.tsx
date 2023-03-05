@@ -25,8 +25,5 @@
 
   export type PropsForm = {
     addToState: (p: Developer) => void,
-    // handleSubmit: (firstName: string,
-    //                 lastName: string,
-    //                 bootcamp: string) => void,
 }
 

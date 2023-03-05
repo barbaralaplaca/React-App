@@ -56,4 +56,7 @@ code {
   padding: 3px 8px;
 }
 
+.card-list {
+  list-style-type: none;
+}
 
