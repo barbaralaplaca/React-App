@@ -10,3 +10,23 @@
     name: string | undefined,
     favouriteColour?: string,
   }
+
+  export type Bootcamp = {
+    bootcamp: string,
+    id: string,
+  }
+  
+  export type CardProps = {
+    instructors: Instructor[],
+    developers: Developer[],
+    bootcamps: Bootcamp[],
+    handleDelete: (p: string) => void,
+  }
+
+  export type PropsForm = {
+    addToState: (p: Developer) => void,
+    // handleSubmit: (firstName: string,
+    //                 lastName: string,
+    //                 bootcamp: string) => void,
+}
+

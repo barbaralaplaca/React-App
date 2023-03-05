@@ -1,9 +1,5 @@
 import { FormEvent, useRef, useState } from 'react'
-import { Developer } from './types';
-
-type PropsForm = {
-    addToState: (p: Developer) => void,
-}
+import { PropsForm } from './types';
 
 export const Form = (props: PropsForm) => {
     const [firstName, setFirstName] = useState('');
@@ -37,6 +33,7 @@ export const Form = (props: PropsForm) => {
     <div className='Form'>
         <h3>Add new developer</h3>
         <form onSubmit={handleSubmit} id="addDeveloperForm">
+        {/* <form onSubmit={() => props.handleSubmit(firstName, lastName, bootcamp)} id="addDeveloperForm"> */}
             <div className='form-input'>
             <label>First name:</label>
             <input 
