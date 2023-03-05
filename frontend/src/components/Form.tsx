@@ -33,7 +33,6 @@ export const Form = (props: PropsForm) => {
     <div className='Form'>
         <h3>Add new developer</h3>
         <form onSubmit={handleSubmit} id="addDeveloperForm">
-        {/* <form onSubmit={() => props.handleSubmit(firstName, lastName, bootcamp)} id="addDeveloperForm"> */}
             <div className='form-input'>
             <label>First name:</label>
             <input 
@@ -67,7 +66,7 @@ export const Form = (props: PropsForm) => {
                 defaultValue={'5df90503-6e35-4a93-91a4-f2a1fe457331'} 
                 required
                 >
-                <option value='5df90503-6e35-4a93-91a4-f2a1fe457331' selected>Javascript</option>
+                <option value='5df90503-6e35-4a93-91a4-f2a1fe457331'>Javascript</option>
                 <option value='4c88d1fb-36a6-46e4-ad79-1c24f90e1e93'>.Net</option>
                 <option value='97608a8a-3bcd-4a0c-b87a-a19cf1014c6b'>Java</option>
             </select>

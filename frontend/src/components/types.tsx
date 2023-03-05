@@ -27,3 +27,8 @@
     addToState: (p: Developer) => void,
 }
 
+  export type PersonProps = {
+    student: Developer,
+    handleDelete: (p: string) => void,
+  }
+

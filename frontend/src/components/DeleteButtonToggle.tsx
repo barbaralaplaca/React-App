@@ -1,10 +1,5 @@
 import { useState } from 'react'
-import { Developer } from './types';
-
-type PersonProps = {
-    student: Developer,
-    handleDelete: (p: string) => void,
-}
+import { PersonProps } from './types';
 
 export const DeleteButtonToggle = (props: PersonProps) => {
     const { student } = props;
