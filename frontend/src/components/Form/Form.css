@@ -1,0 +1,31 @@
+.Form {
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.form-title {
+    color: #ff6f3c;
+    text-align: center; 
+}
+
+.form-input-button {
+    background: #155263; 
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    padding: 4px 10px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.form-label {
+    padding: 10px;
+}
+
+.form-input {
+    margin: 5px 10px;
+}
+
+.form-select {
+    width: 40%;
+}

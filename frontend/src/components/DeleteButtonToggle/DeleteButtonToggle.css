@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteBtn {
+    background: #155263; 
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    padding: 3px 10px;
+    font-weight: 600;
+}
+
+.card-developer-name {
+    margin: 0;
+    padding: 1vh 0;
+}

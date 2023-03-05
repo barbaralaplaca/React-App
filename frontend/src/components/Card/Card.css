@@ -1,0 +1,24 @@
+.bootcamp {
+    min-width: 25vw;
+    min-width: 200px;
+    align-items: center;
+    border: 2px solid #ff6f3c;
+    border-radius: 7px;
+    margin: 1em;
+    padding: 0.1em 1em;
+}
+
+.card-title {
+    border-bottom: 1px solid #ff6f3c;
+    color: #155263;
+}
+
+.cardList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-instructor-name {
+    margin: 0;
+    padding: 1vh 0;
+}

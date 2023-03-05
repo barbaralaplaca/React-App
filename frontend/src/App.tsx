@@ -1,8 +1,8 @@
 import './index.css';
-import { Form } from './components/Form';
-import { Gallery } from './components/Gallery';
 import { useEffect, useState } from 'react';
 import { Bootcamp, Developer, Instructor } from './components/types';
+import { Form } from './components/Form/Form';
+import { Gallery } from './components/Gallery/Gallery';
 
 function App() {
   const [developersGallery, setDevelopersGallery] = useState<Developer[]>([]);
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className='App'>
-        <Form 
+        <Form
         addToState={addToState}
         bootcamps={bootcampList}
         />

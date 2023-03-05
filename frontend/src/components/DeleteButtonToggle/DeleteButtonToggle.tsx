@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { PersonProps } from './types';
+import { PersonProps } from '../types';
+import './DeleteButtonToggle.css';
 
 export const DeleteButtonToggle = (props: PersonProps) => {
     const { student } = props;
@@ -8,14 +9,14 @@ export const DeleteButtonToggle = (props: PersonProps) => {
 
   return (
         <li 
-            className="card-list" 
+            className="card toggled" 
             key={student.id}
             onClick={() => setToggle(!toggle)}
             onMouseLeave={() => setToggle(false)}
             >
-            <p>{student.name}</p>
+            <p className='card-developer-name'>{student.name}</p>
             {toggle && (
-            <button onClick={() => props.handleDelete(student.id)}>Delete</button>
+            <button onClick={() => props.handleDelete(student.id)} className='deleteBtn'>Delete</button>
             )}
         </li>  )
 }
