@@ -18,10 +18,11 @@ export default function Card(props: CardProps) {
                 ))}
         </div>
         <div className='developers-card'>
-        <h3>Developers</h3>
+        <h3>Developers</h3> 
            <ul>
-        {developers.map((developer: Developer) => (
-                <DeleteButtonToggle 
+        {developers.map((developer: Developer, i) => (
+                <DeleteButtonToggle
+                  key ={i} 
                   student={developer} 
                   handleDelete={handleDelete}
                   />

@@ -1,15 +1,15 @@
-import { FormEvent, useRef, useState } from 'react'
-import { PropsForm } from './types';
+import { FormEvent, useState } from 'react'
+import { Bootcamp, PropsForm } from './types';
 
 export const Form = (props: PropsForm) => {
+    const { bootcamps } = props;
+    const javascriptId = '5df90503-6e35-4a93-91a4-f2a1fe457331'
+    
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [bootcamp, setBootcamp] = useState('5df90503-6e35-4a93-91a4-f2a1fe457331');
-
-
-    const firstNameRef = useRef<HTMLInputElement>(null)
-    const lasttNameRef = useRef<HTMLInputElement>(null)
-    const bootcampRef = useRef<HTMLSelectElement>(null)
+    const [bootcamp, setBootcamp] = useState(javascriptId);
+    
+    // ''
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
@@ -28,7 +28,6 @@ export const Form = (props: PropsForm) => {
             }})
         };
     
-
   return (
     <div className='Form'>
         <h3>Add new developer</h3>
@@ -38,7 +37,6 @@ export const Form = (props: PropsForm) => {
             <input 
                 type="text"
                 value={firstName}
-                ref={firstNameRef} 
                 onChange={(e) => setFirstName(e.target.value)}
                 placeholder='enter first name' 
                 className='addDeveloperFirstNameInput' 
@@ -50,7 +48,6 @@ export const Form = (props: PropsForm) => {
             <input 
                 type="text"
                 value={lastName}
-                ref={lasttNameRef} 
                 onChange={(e) => setLastName(e.target.value)}
                 placeholder='enter last name' 
                 className='addDeveloperLastNameInput' 
@@ -61,14 +58,18 @@ export const Form = (props: PropsForm) => {
             <label>Select bootcamp</label>
             <select 
                 value={bootcamp}
-                ref={bootcampRef} 
                 onChange={(e) => setBootcamp(e.target.value)}
                 defaultValue={'5df90503-6e35-4a93-91a4-f2a1fe457331'} 
                 required
                 >
-                <option value='5df90503-6e35-4a93-91a4-f2a1fe457331'>Javascript</option>
-                <option value='4c88d1fb-36a6-46e4-ad79-1c24f90e1e93'>.Net</option>
-                <option value='97608a8a-3bcd-4a0c-b87a-a19cf1014c6b'>Java</option>
+                {bootcamps.map((bootcamp: Bootcamp) => (
+                <option 
+                key={bootcamp.bootcamp} 
+                value={bootcamp.id}
+                >
+                {bootcamp.bootcamp}
+                </option>
+                ))}
             </select>
             </div>
             <button className='addDeveloperBtn form-input'>Add Developer</button>

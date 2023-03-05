@@ -25,7 +25,8 @@
 
   export type PropsForm = {
     addToState: (p: Developer) => void,
-}
+    bootcamps: Bootcamp[],
+  }
 
   export type PersonProps = {
     student: Developer,

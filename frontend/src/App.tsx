@@ -40,7 +40,10 @@ function App() {
 
   return (
     <div className='App'>
-        <Form addToState={addToState}/>
+        <Form 
+        addToState={addToState}
+        bootcamps={bootcampList}
+        />
         <Gallery 
         developers={developersGallery} 
         instructors={instructorsGallery} 
