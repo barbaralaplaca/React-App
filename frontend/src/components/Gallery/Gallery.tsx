@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card from "../Card/Card";
 import { Bootcamp, CardProps, Developer, Instructor } from "../types"
 import './Gallery.css';
@@ -8,7 +8,6 @@ export const Gallery = (props: CardProps) => {
   const allBootcamps = bootcamps.map(bootcamp => bootcamp.id); 
   
   const [activeGallery, setActiveGallery] = useState(allBootcamps);
-
 
   const handleChange = ((event: React.ChangeEvent<HTMLSelectElement>) => {
     event.preventDefault();
@@ -26,7 +25,6 @@ export const Gallery = (props: CardProps) => {
           onChange={(e) => handleChange(e)} 
           value={activeGallery} 
           className='selectBootcamp'>
-            <option value={''} disabled>Select a bootcamp</option>
             <option value={allBootcamps}>All</option>
             {bootcamps.map(bootcamp => (
               <option value={bootcamp.id} key={bootcamp.id}>{bootcamp.bootcamp}</option>

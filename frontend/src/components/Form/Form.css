@@ -1,6 +1,8 @@
-.Form {
+.form {
     margin: 10px;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-title {

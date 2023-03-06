@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "eslint-config-salt-typescript": "^1.0.0"
+  }
+}

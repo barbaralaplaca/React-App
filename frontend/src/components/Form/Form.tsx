@@ -13,9 +13,9 @@ export const Form = (props: PropsForm) => {
     const [message, setMessage] = useState('');
 
     const handleSubmit = (e: FormEvent) => {
-        e.preventDefault()
+        e.preventDefault();
         if (firstName.match(/\W|[1-9]/) || lastName.match(/\W|[1-9]/)) {
-            return setMessage('Only alphabetical characteres are allowed')
+            return setMessage('Only alphabetical characteres are allowed');
         } if (firstName === '' || lastName === '') {
             return setMessage('Mandatory field');
         }
@@ -28,19 +28,18 @@ export const Form = (props: PropsForm) => {
             body: JSON.stringify(developer)
         }).then((response) => {
             if (response.status === 200) {
-                response.json().then((data) => {
-                    props.addToState(data.developer);
-                })
+                response.json()
+                .then((data) => props.addToState(data.developer));
             }})
         setFirstName('');
         setLastName('');
         setMessage('Developer added');
-        };
+    };
         
   return (
-    <div className='Form'>
+    <div className='form'>
         <h3 className='form-title'>Add new developer</h3>
-        <form onSubmit={handleSubmit} id="addDeveloperForm">
+        <form onSubmit={handleSubmit} id="addDeveloperForm" className='form'>
             <div className='form-input'>
             <label className='form-label'>First name:</label>
             <input 
@@ -82,7 +81,8 @@ export const Form = (props: PropsForm) => {
             <button 
                 className='form-input form-input-button' 
                 id='addDeveloperBtn'
-                >Add Developer</button>
+                >Add Developer
+            </button>
         </form>
         <p>{message}</p>
     </div>
