@@ -1,28 +1,10 @@
-# &lt;/salt&gt;
+# React Project
 
-## React - Salt Instructors & Developers
+Project designed during bootcamp for training of React skills following the instructions below.
 
-Us instructors have so much to do so we need help keeping track on all developers. Your task is to create a simple UI for us to add & remove developers in different bootcamps and to be able to filter them by bootcamp in the UI.
+## React - Instructors & Developers
 
 We have supplied you with a backend server, so this is a frontend test only. You need to follow the specifications as detailed below. Use the screenshot at the bottom of this page as a wireframe.
-
-This weekend test has a very long list of specifications which might make it seem larger than it actually is. Focus on completing one specification at a time.
-
-We recommend that your first command is:
-
-`npx create-react-app frontend --template typescript`
-
-The backend server for this weekend test is already available and you do not need to make any changes there. To install and start the server you have to run the following from the project's root folder:
-
-```shell
-cd server && npm i && npm start
-```
-
-The server runs on the port `3001` and the frontend should run on port `5173`. For information about your available endpoints go to `http://localhost:3001/swagger`. We recommend you playing around with the api through a REST API Client like [Postman](https://www.postman.com/downloads/). Your frontend should communicate with the backend server to add and delete developers.
-
-Read the UI and Technical specifications below carefully.
-> Google for inspiration, read other developers code but make sure to not copy-paste solutions as that would be considered cheating.
-> The specifications follow the [RFC2119] (<https://www.ietf.org/rfc/rfc2119.txt>) standards. A good thing to read in your spare time.
 
 ### UI specifications
 
@@ -86,64 +68,7 @@ We will run a separate end-to-end-test suite (e2e test) that automate correcting
 - we will look for a button with class `deleteBtn` inside a item with class `toggled`.
 - we will look for an element with class `errorMessage` if input values are invalid. If you use a set timeout, make sure to display the message for a min of 1000 ms.
 
-### Running e2e tests
-
-In this repository there's a `e2e`-folder that contains e2e-test using [Cypress.IO](http://cypress.io). This should be run separately from your application (your solution). You DO NOT need to copy this into the created react application.
-
-1. Start your backend `server` and your `frontend` application and ensure that your client is running on `http://localhost:5173`
-2. To install and start the e2e tests, in a separate terminal window, you have to run the following from the project's root folder:
-
-   ```bash
-   cd e2e && npm i && npm t
-   ```
-
-We have supplied a single e2e test that adds a developer to the `jsfs` list. You can (and should) add more tests to ensure that your application works according to the requirements. Use our tests as an example.
-
-When correcting your tests our test suites will contain more tests than the ones that we have shared with you.
-
 ### Handing in the test
-
-- Check that you have no console errors.
-- Make sure it runs from a clean `npm i && npm start` in both the `server` and the `frontend` folders.
-- Hand in the content of your `frontend` folder (except for the node_modules) in a folder named `saltBootcamp` in your weekend test folder.
 
 Make it work, and then if you have time, make it great!
 
-## FAQ
-
-Can we ignore Internet Explorer?
-
-> Yes, you do not have to consider compatibility with Internet Explorer.
-
-Can we use axios?
-
-> Yes, use any library that you want.
-
-Can we use localStorage?
-
-> No.
-
-I'm so stuck, and I don't know how to get started!
-
-> Take a break, you have all the information and skills you need to solve this. Go through lecture slides and previous labs. Think of these three questions:
->
-> - What is the apps component structure?
-> - What components should include logic?
-> - What state is only local and what state/setters do I have to prop drill?
->
-> As a rule of thumb, you should have the closest parent component of all the children that share a state being the smart component. In general, that's the App component. I.e. your app's state will live there, be updated there.
-
-How will you judge our solutions?
-
-> We are going to judge them based on functionality (50%, running an automated E2E-test suite, be careful using the correct classes above), and a code review where we confirm that the technical specification has been followed (50%). We will not judge the design.
-
-Do I need to make it pretty? Or can I just focus on the functionality?
-> For this test, our preference is going to be the functionality. I.e.
->
-> - All the features should be 100% working.
-> - All the technical specifications are followed properly.
-> - You have put the CSS Classes and IDs on the elements for our tests to pass.
-
-| ![Component levels](componentLevelsExample.png) |
-| :-------------------------: |
-| Illustration of 4 levels of components |
